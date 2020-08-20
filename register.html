@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/f7f6a0bf12.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="smallGrid-register">
+        <header>
+            <div class="title">
+                <h1>Scruffy to Fluffy</h1>
+                <h2>Pet Salon</h2>
+            </div>
+            <div class="dog-header">
+                <img src="images/dog.png" alt="dog photo">
+            </div>
+        </header>
+
+        <section>
+            <nav class="menu" id="menu1">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="register.html">Register</a>
+            </nav> 
+            
+        </section>
+    </div>
+    <div class="sectionDivide"></div>    
+    
+    <main class="container" id="main">
+        <h2>
+            <p>Please fill out pet information:</p>
+        </h2>
+        <form action="">
+            <p class="form-group">
+                <label for="name">Pet Name:</label>
+                <input type="text" class="form-control" id="petName">
+            </p>
+            <p>
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="petAge">
+            </p>
+            <p>
+                <label for="type">Type of animal:</label>
+                <select name="type"  class="form-control" id="petType">
+                    <option value="" disabled selected> ---- Select a pet type ----</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                </select>
+            </p>
+            <p>
+                <label for="breed">Breed:</label>
+                <input type="text" class="form-control" id="petBreed">
+            </p>
+            <p>
+                <label for="gender">Gender:</label>
+                <input type="text" class="form-control" id="petGender">
+            </p>
+           
+            <p>
+                <label for="service">Service:</label>
+                <select name= "service" class="form-control" id="petService">
+                    <option value="" disabled selected> ---- Select a Service ----</option>
+                    <option value="Shower">Shower</option>
+                    <option value="Hair cut">Hair Cut</option>
+                    <option value="Full Service">Full Service</option>
+                </select>
+            </p>
+            <p>
+                <label for="ownersName">Owners Name:</label>
+                <input type="text" class="form-control" id="ownersName">
+            </p>
+            <p>
+                <label for="contactPhone">Contact Phone:</label>
+                <input type="tel" class="form-control" id="contactPhone">
+            </p>
+            <p>
+                <label for="ownersEmail">Email for monthly pet specials (optional):</label>
+                <input type = "email" defaultValue="----" class="form-control" id="ownersEmail" placeholder="name@example.com">
+            </p>
+            <p>
+                <input type="button" class="btn btn-primary" value="Register" id="btn-register">
+            </p>
+            
+        <br>
+        
+        </form>
+    </main>
+    
+    <div class="sectionDivide"></div>
+
+    <div class= "container">
+        <div class="loginSection">
+            <h2>Login:</h2>
+            <p>
+            <label class="loginInfo" for="user">User:</label>
+            <input type="text" class="form-control" id="userName">
+            </p>
+            <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" class="form-control"  id="userPass">
+            </p>
+            <p>
+                <input type="button" class="btn btn-secondary" value="Log in" onclick="login();">
+            </p>
+        </div>
+    </div>
+
+    <div class="sectionDivide"></div>
+
+    <section class="container" id="pets">
+        
+    </section>
+   
+    <section class="container form-group">
+        <h2 id="searchH2">Search for your pet by name, service or pet type:</h2>
+        <input type="search" name="search" class="form-control" id ="petSearch">
+        <button class="btn btn-primary" onclick="searchPet();">Search</button>
+    </section>
+<br>
+    <section class="container table-container">
+        <table class="table">
+            <thead>
+                <th>Name:</th>
+                <th>Age:</th>
+                <th>Type:</th>
+                <th>Gender:</th>
+                <th>Breed:</th>
+                <th>Service:</th>
+                <th>Owner's Name:</th>
+                <th>Contact Phone:</th>
+                <th>Email:</th>
+                
+            </thead>
+            <tbody id = "rowPet">
+
+            </tbody>
+
+        </table>
+    </section>
+    <br>
+
+    <footer>
+        <div id="info">
+            
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script> 
+    <!--<script src="js/directory.js"></script>--> 
+    <!--<script src="js/test5.js"></script>-->
+    
+    
+</body>
+</html>
